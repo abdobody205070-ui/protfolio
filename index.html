@@ -28,21 +28,56 @@ header p{
 color:#cbd5e1;
 }
 
+/* sections */
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:30px;
 }
 
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+/* cards */
 .card{
 background:#111c33;
 padding:20px;
-margin:15px 0;
 border-radius:10px;
+transition:0.3s;
 }
 
-h2{
-color:#38bdf8;
+.card:hover{
+transform:translateY(-5px);
+background:#162447;
+}
+
+/* skills */
+ul{
+list-style:none;
+padding:0;
+}
+
+ul li{
+padding:5px 0;
+}
+
+/* projects grid */
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* links */
+a{
+color:#60a5fa;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
 }
 
 footer{
@@ -86,35 +121,41 @@ I am learning programming and web development and focusing on becoming a Front-E
 <section>
 <h2>Projects</h2>
 
-<div class="project">
-  <h2>C++ Project</h2>  
-  <p>مشروع بلغة C++ موجود على GitHub</p>
-  <a href="https://github.com/abdobody205070-ui/app-in-cpp-abohdhod" target="_blank">
-    عرض الكود على GitHub
-  </a>
+<div class="projects-grid">
+
+<div class="card">
+<h3>C++ Project</h3>
+<p>مشروع بلغة C++ موجود على GitHub</p>
+<a href="https://github.com/abdobody205070-ui/app-in-cpp-abohdhod" target="_blank">
+عرض الكود على GitHub
+</a>
 </div>
 
 <div class="card">
-  <h3>C++ Projects</h3>
-  <p>My C++ practice projects</p>
-  <a href="https://github.com/abdobody205070-ui/cpp-projects">View Project</a>
+<h3>C++ Projects</h3>
+<p>My C++ practice projects</p>
+<a href="https://github.com/abdobody205070-ui/cpp-projects" target="_blank">
+View Project
+</a>
+</div>
 
 <div class="card">
-  <h3>Calculator Web App</h3>
-  <p>Simple calculator built using HTML, CSS, and JavaScript.</p>
-  <a href="https://github.com/abdobody205070-ui/calculator-web-app" target="_blank">
-    View Code
-  </a>
-  <br>
-  <a href="https://abdobody205070-ui.github.io/calculator-web-app/" target="_blank">
-    Live Demo
-  </a>
+<h3>Calculator Web App</h3>
+<p>Simple calculator built using HTML, CSS, and JavaScript.</p>
+<a href="https://github.com/abdobody205070-ui/calculator-web-app" target="_blank">
+View Code
+</a>
+<br>
+<a href="https://abdobody205070-ui.github.io/calculator-web-app/" target="_blank">
+Live Demo
+</a>
 </div>
-  
 
 <div class="card">
 <h3>Cashier System</h3>
 <p>Basic system to practice programming logic</p>
+</div>
+
 </div>
 
 </section>
