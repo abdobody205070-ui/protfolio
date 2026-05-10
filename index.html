@@ -1,51 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdo Coding | Company</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdellatif | Portfolio 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --dark-bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #0ea5e9, #020617);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 800; background: linear-gradient(to right, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .typewriter { font-family: 'Fira Code', monospace; color: var(--primary); font-size: 1.2rem; min-height: 1.5em; }
+
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 30px 0; }
+        .skill { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem; transition: 0.3s; }
+        .skill:hover { background: var(--primary); color: #000; transform: scale(1.1); }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 210, 255, 0.5); }
+
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; }
+        .stat-item h3 { font-size: 1.5rem; color: var(--primary); }
+        .stat-item p { font-size: 0.8rem; opacity: 0.7; }
+    </style>
 </head>
 <body>
 
-<header class="navbar">
-  <h2>Abdo Coding</h2>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <div class="glass-card" id="portfolio-card">
+        <h1>عبد اللطيف</h1>
+        <div class="typewriter" id="typewriter"></div>
 
-<section id="home" class="hero">
-  <div class="hero-text">
-    <h1>We Build Modern Web Apps 🚀</h1>
-    <p>Software Company Building Websites & Platforms</p>
-    <button onclick="scrollToSection('projects')">View Projects</button>
-  </div>
-</section>
+        <div class="skills">
+            <div class="skill">C++</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML5</div>
+            <div class="skill">Logic Design</div>
+            <div class="skill">Problem Solving</div>
+        </div>
 
-<section id="services" class="section">
-  <h2>Services</h2>
-  <div class="grid">
-    <div class="card">Web Development</div>
-    <div class="card">UI/UX Design</div>
-    <div class="card">E-Learning Platforms</div>
-    <div class="card">Backend Systems</div>
-  </div>
-</section>
+        <p style="opacity: 0.9; line-height: 1.8;">
+            أهلاً بك في مساحتي الرقمية. أنا مبرمج طموح، أعمل حالياً على تطوير مشاريع مبتكرة واستكشاف أعماق لغات البرمجة. يمكنك الإطلاع على كافة مستودعاتي البرمجية وتجاربي عبر الرابط أدناه.
+        </p>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  <div id="projectContainer" class="grid"></div>
-</section>
+        <a href="https://github.com/abdobody205070-ui" target="_blank" class="cta-button">
+            استكشف مستودعات المشاريع (GitHub)
+        </a>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: abdocoding@company.com</p>
-</section>
+        <div class="stats">
+            <div class="stat-item">
+                <h3 id="repo-count">10+</h3>
+                <p>مستودع</p>
+            </div>
+            <div class="stat-item">
+                <h3>C++</h3>
+                <p>اللغة الأساسية</p>
+            </div>
+            <div class="stat-item">
+                <h3>Python</h3>
+                <p>الأتمتة والذكاء</p>
+            </div>
+        </div>
+    </div>
 
-<script src="script.js"></script>
+    <script>
+        // تأثير الكتابة (Typewriter Effect)
+        const text = "طالب علوم حاسب | مطور برمجيات | متعلم شغوف";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // تأثير حركة الكارت مع الماوس
+        const card = document.getElementById('portfolio-card');
+        document.addEventListener('mousemove', (e) => {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // تشغيل التفاعلات عند تحميل الصفحة
+        window.onload = typeWriter;
+    </script>
 </body>
 </html>
